@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#fefcff",
+                    "secondary-container": "#0070eb",
+                    "outline": "#737780",
+                    "surface": "#f7f9fb",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c3c6d1",
+                    "on-surface-variant": "#43474f",
+                    "error-container": "#ffdad6",
+                    "background": "#f7f9fb",
+                    "surface-container-highest": "#e0e3e5",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-fixed-variant": "#004493",
+                    "on-secondary-fixed": "#001a41",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb59c",
+                    "tertiary": "#3d0e00",
+                    "surface-tint": "#3a5f94",
+                    "surface-container-high": "#e6e8ea",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#001b3c",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-primary-container": "#799dd6",
+                    "tertiary-container": "#611b00",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-container": "#f47749",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "secondary": "#0058bc",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "primary": "#001e40",
+                    "primary-container": "#003366",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1e",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#380c00",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-fixed-variant": "#822800",
+                    "inverse-primary": "#a7c8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .text-gradient {
+            background: linear-gradient(to bottom right, #001e40, #003366);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 w-full bg-slate-50/70 dark:bg-slate-950/70 backdrop-blur-xl font-manrope tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-blue-950 dark:text-white">
+            The Elevated Voyager
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 hover:translate-y-[-2px] transition-transform duration-300" href="#">Flights</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:translate-y-[-2px] transition-transform duration-300" href="#">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:translate-y-[-2px] transition-transform duration-300" href="#">Stays</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:translate-y-[-2px] transition-transform duration-300" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="login.php"><button class="text-slate-600 font-medium px-4 py-2 hover:opacity-80 transition-opacity">Sign In</button></a>
+<a href="register.php"><button class="bg-tertiary-container text-on-tertiary-container px-6 py-2.5 rounded-full font-bold hover:translate-y-[-2px] transition-transform shadow-lg">Register</button></a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section with Flight Search -->
+<section class="relative h-[870px] flex items-center justify-center overflow-hidden px-8">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="cinematic wide angle shot of a private jet wing soaring above a thick sea of clouds during a vibrant orange sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYfjAhI83oyaJeEe6FrYU83zriEmmFXjg3OggjA5ULY4jvQSoVybLERhO1gRyAnNJgS2KqMDo-Y_0MXhT9y575GLXqMuPpu725NfGdVysYhz6VpWH99k8xyiQ4iKYBM4cjrA8IHU8nl1puVb3g7_X2Uwvr3P7FYwJJv84FsQS2gAaOElK3jX0yQzvIMeyrLr_ry2z2zpWt8EfwCbQKsRl1MmuZ8tIo7YGNLuezXUIPA7X9fqZxY_loeufGEWZsfqQp2ns3TlH7aOE"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/60 to-primary-container/40"></div>
+</div>
+<div class="relative z-10 w-full max-w-6xl">
+<div class="mb-12 text-center">
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-white tracking-tighter mb-4">
+                        The Precise Horizon
+                    </h1>
+<p class="text-xl text-blue-100/90 font-medium max-w-2xl mx-auto">
+                        Curated journeys for the discerning traveler. TravelSc elevates your flight experience with editorial precision.
+                    </p>
+</div>
+<!-- Flight Search Widget -->
+<div class="glass-effect rounded-3xl p-8 shadow-2xl border border-white/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-primary/60 px-2">Origin</label>
+<div class="bg-surface-container-high/50 rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+<span class="material-symbols-outlined text-primary/40">flight_takeoff</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 w-full text-primary font-bold placeholder:text-primary/30" placeholder="London, LHR" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-primary/60 px-2">Destination</label>
+<div class="bg-surface-container-high/50 rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+<span class="material-symbols-outlined text-primary/40">flight_land</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 w-full text-primary font-bold placeholder:text-primary/30" placeholder="New York, JFK" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-primary/60 px-2">Dates</label>
+<div class="bg-surface-container-high/50 rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+<span class="material-symbols-outlined text-primary/40">calendar_today</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 w-full text-primary font-bold placeholder:text-primary/30" placeholder="Oct 12 - Oct 24" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-primary/60 px-2">Travelers</label>
+<div class="bg-surface-container-high/50 rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+<span class="material-symbols-outlined text-primary/40">group</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 w-full text-primary font-bold placeholder:text-primary/30" placeholder="2 Adults, First" type="text"/>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="bg-tertiary-container text-on-tertiary-container px-10 py-4 rounded-full font-bold text-lg hover:translate-y-[-4px] transition-all shadow-xl flex items-center gap-2">
+                            Search Flights
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Destinations (Bento Grid) -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">Curated Escapes</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary mt-2">Signature Destinations</h2>
+</div>
+<button class="text-primary font-bold border-b-2 border-primary/20 hover:border-primary transition-all pb-1 flex items-center gap-2">
+                    View All Destinations <span class="material-symbols-outlined text-sm">east</span>
+</button>
+</div>
+<div class="grid grid-cols-12 grid-rows-2 gap-6 h-[700px]">
+<div class="col-span-12 md:col-span-7 row-span-2 relative rounded-3xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxury tropical resort with wooden overwater villas on turquoise ocean at dawn with soft pastel sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6XlbKB2TBjhSlE4KbHOgSc1XM8ur6VML8z1J4cfo_Im0PsHljtO_UIn0iwXUkWcUMfI6OYH5_1hePG3gxXQYCXEtf9UMKNcbv5RWO341vWcSyTHUSjp8-GuuDzb6yjp6d7z2738bGm0-6m4lAfu3gyDyu9BiLO6BqwJAy3orL8KL_gAL7SfR5bZzZAUmxl8p2uGepw_msi5dEkVSDXR3IfJ_ujgNmjhlCu4xnX-QDFZuh_vfL4igHac3q-aV2bRBMdnnrG_LZeH0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Trending</span>
+<h3 class="text-4xl font-headline font-bold">Maldives</h3>
+<p class="text-blue-100/80 mt-2">Private lagoons and unrivaled serenity.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 row-span-1 relative rounded-3xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="historic european city architecture with golden hour light reflecting off classical limestone buildings and cobblestone streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIMRZIHnPIXsS3q8uz7K4grRlT7f0idy5FQwRlJYdlGlksAJS2YozHLdQmoDnvIddm61ZlTECFh5i3S-euVot6xxlgFfZacpTtJHZ1GPbnI_F1wfvjZB88EjIwr9QLnQ47qvaXoTYK9wYh4pT6UUbu4-RioRpf-oMxvpddX9iNKWGExxuRHsmqRKpHQiyh1SwKAkA_JtrdZhJkgEfQXfpfPUKbsLwtxm4Adllqg8WdUhdQTBg0_qX01OS4Xl6UDCtOCyQrLIzd7II"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-headline font-bold">Florence, Italy</h3>
+<p class="text-blue-100/80 text-sm">Renaissance heritage and fine dining.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 row-span-1 relative rounded-3xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="misty mountain peak in the swiss alps with snow-capped ridges and a solitary high-altitude luxury lodge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe5cNTDLH5OoWRvI-zzMpz0o2gxrWuRupqwByCPJ0igHQPm55DWFg0ZDIBZDSnTDwXVvXHS2fwhX5d471dNEStIXRjm9vD1qIeM54XvRbKy5BcAAU8FVfLzNw_FtGzFTmK_34rzXSpL54LR3f-GJasgAuK2B-EkZhRo8Z_5bol9ie2S8p8qQ5ieOlGmnjFn5MIVvmG6CK2zIdF3sIxrIx5JnfiR1nnWp301gSnQmbSr53GOtKlnWdWGs8r2gO-U95IdvdpW1-7PhE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-2xl font-headline font-bold">Swiss Alps</h3>
+<p class="text-blue-100/80 text-sm">The pinnacle of mountain luxury.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Precision & Luxury -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+<img class="rounded-[3rem] w-full aspect-[4/5] object-cover relative z-10 shadow-2xl" data-alt="elegant traveler in a luxury airport lounge looking out through large windows at planes on the runway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAewXniWtyOnUJ-ZA7bU6l6vB1dnTITHQeXXT6tN1x77cyg83nbnw9YrwqN4JWc8PT9JKV7scTtP4SZa_-8wW0JHsXgD87h1X0mjVyPvm384gjqY8sB9I3puMOQVnGl2tfiVZf4FzgMDnDnnF5DZwvw-g8V008_vJwWupmT19Dt1vsIhwkU0rSmTt-iCuxXLo0rers0M7ZAsY2uJMVbTU21klGUQwX9OWe9TcO5gw8Z__CiFxAGujbX8uBm5du68rNrZaA2irDa0OE"/>
+<div class="absolute -bottom-8 -right-8 glass-effect p-8 rounded-3xl z-20 shadow-xl max-w-xs">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-4" data-weight="fill">verified_user</span>
+<p class="font-headline font-bold text-primary text-xl">The Precision Standard</p>
+<p class="text-on-surface-variant text-sm mt-2">Every flight, connection, and stay is vetted by our expert travel concierges.</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em]">The TravelSc Promise</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary mt-4 leading-tight">Crafting the Zenith of Aviation Experiences</h2>
+<div class="mt-12 space-y-8">
+<div class="flex gap-6">
+<div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-secondary">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary">Absolute Precision</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed">Our algorithms don't just find flights; they find the optimal balance of timing, comfort, and logistical fluidity.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-secondary">diamond</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary">Editorial Luxury</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed">We provide access to exclusive first-class inventories and boutique accommodations unavailable to the public.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary">Digital Concierge</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed">24/7 dedicated support for our Voyager members, handling everything from re-routing to last-minute lounge bookings.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Experience Bar -->
+<section class="max-w-7xl mx-auto px-8 -mt-16 relative z-30">
+<div class="bg-primary-container rounded-[2.5rem] p-12 text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-2xl">
+<div>
+<h3 class="text-3xl font-headline font-bold">Ready for the Elevated Experience?</h3>
+<p class="text-blue-200 mt-2">Join over 50,000 global travelers using TravelSc daily.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-colors">Learn More</button>
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-full font-bold hover:translate-y-[-4px] transition-all shadow-lg">Become a Member</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 mt-24 bg-blue-950 dark:bg-black font-inter text-xs tracking-wide uppercase">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+<div>
+<div class="text-xl font-bold text-white mb-6">The Elevated Voyager</div>
+<p class="text-blue-300/70 normal-case mb-8 max-w-sm">Redefining the standards of modern travel through technological precision and high-end curation.</p>
+<div class="flex gap-6">
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Privacy Policy</a>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Terms of Service</a>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Cookie Settings</a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-between">
+<div class="flex gap-12">
+<div class="flex flex-col gap-3">
+<span class="text-white font-bold mb-2">Company</span>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Sustainability</a>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-white font-bold mb-2">Travel</span>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Flights</a>
+<a class="text-blue-300/70 hover:text-white transition-opacity" href="#">Stays</a>
+</div>
+</div>
+<div class="mt-12 md:mt-0 text-blue-300/50">
+                    © 2026 The Elevated Voyager. Member of SkyTeam.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
